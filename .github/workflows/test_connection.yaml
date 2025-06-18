@@ -11,8 +11,9 @@ jobs:
       SNOWFLAKE_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
       SNOWFLAKE_USER: ${{ secrets.SF_USER }}
       SNOWFLAKE_ROLE: ${{ secrets.SF_ROLE }}
-      SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       SNOWFLAKE_HOST: ${{ secrets.SF_HOST }}
+      SNOWFLAKE_PRIVATE_KEY_RAW: ${{ secrets.SF_KAY_RAW }}
+      SNOWFLAKE_AUTHENTICATOR: "SNOWFLAKE_JWT"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
