@@ -1,0 +1,26 @@
+name: Test Snowflake CLI Connection
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  snowflake-connection-test:
+    runs-on: ubuntu-latest
+    env:
+      SNOWFLAKE_ACCOUNT: ${{ secrets.sf_accound }}
+      SNOWFLAKE_USER: ${{ secrets.sf_accound }}
+      SNOWFLAKE_ROLE: ${{ secrets.sf_accound }}
+      SNOWFLAKE_PASSWORD: ${{ secrets.sf_accound }}
+      SNOWFLAKE_HOST: ${{ secrets.sf_accound }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Snowflake CLI using snowflakedb/snowflake-cli-action
+        uses: snowflakedb/snowflake-cli-action@v1
+
+      - name: Test snow connection
+        run: |
+          snow connection test -x
+
