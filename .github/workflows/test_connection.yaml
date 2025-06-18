@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Snowflake CLI using snowflakedb/snowflake-cli-action
-        uses: snowflakedb/snowflake-cli-action@v1
+        uses: snowflakedb/snowflake-cli-action@v1.5
 
       - name: Test snow connection
         run: |
