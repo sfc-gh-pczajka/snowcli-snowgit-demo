@@ -8,11 +8,11 @@ jobs:
   snowflake-connection-test:
     runs-on: ubuntu-latest
     env:
-      SNOWFLAKE_ACCOUNT: ${{ secrets.sf_accound }}
-      SNOWFLAKE_USER: ${{ secrets.sf_accound }}
-      SNOWFLAKE_ROLE: ${{ secrets.sf_accound }}
-      SNOWFLAKE_PASSWORD: ${{ secrets.sf_accound }}
-      SNOWFLAKE_HOST: ${{ secrets.sf_accound }}
+      SNOWFLAKE_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
+      SNOWFLAKE_USER: ${{ secrets.SF_USER }}
+      SNOWFLAKE_ROLE: ${{ secrets.SF_ROLE }}
+      SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+      SNOWFLAKE_HOST: ${{ secrets.SF_HOST }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
