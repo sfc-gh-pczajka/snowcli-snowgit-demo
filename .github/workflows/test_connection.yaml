@@ -21,6 +21,10 @@ jobs:
       - name: Install Snowflake CLI using snowflakedb/snowflake-cli-action
         uses: snowflakedb/snowflake-cli-action@v1.5
 
+      - name: Check version
+        run: |
+          snow --help
+
       - name: Test snow connection
         run: |
           snow connection test -x
