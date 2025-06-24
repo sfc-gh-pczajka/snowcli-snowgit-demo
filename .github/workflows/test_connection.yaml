@@ -13,7 +13,7 @@ jobs:
       SNOWFLAKE_HOST: ${{ secrets.SF2_HOST }}
       SNOWFLAKE_PASSWORD: ${{ secrets.SF2_PASSWORD }}
       SNOWFLAKE_AUTHENTICATOR: "SNOWFLAKE_JWT"
-      SNOWFLAKE_PRIVATE_KEY_RAW: ${{ SF2_KEY_RAW }}
+      SNOWFLAKE_PRIVATE_KEY_RAW: ${{ secrets.SF2_KEY_RAW }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
