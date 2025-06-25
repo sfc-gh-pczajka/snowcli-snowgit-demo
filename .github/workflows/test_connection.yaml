@@ -28,4 +28,10 @@ jobs:
       - name: Test snow connection
         run: |
           snow connection test -x
+      - name: Test snow connection
+        run: |
+          snow project dry-run -x
+      - name: Test snow connection
+        run: |
+          snow project execute -x
 
